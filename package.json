@@ -1,0 +1,39 @@
+{
+  "name": "phantom-lambda-template",
+  "version": "0.0.2",
+  "description": "The bare minimum for a phantomjs app running on Amazon Lambda.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/rebelmail/node-lambda-template.git"
+  },
+  "author": "motdotla",
+  "license": "isc",
+  "bugs": {
+    "url": "https://github.com/rebelmail/node-lambda-template/issues"
+  },
+  "homepage": "https://github.com/rebelmail/node-lambda-template",
+  "dependencies": {
+    "graceful-readlink": "^1.0.1",
+    "nodemailer": "^2.4.1",
+    "nodemailer-smtp-transport": "^2.5.0"
+  },
+  "devDependencies": {
+    "aws-sdk": "^2.1.39",
+    "node-lambda": "^0.6.1",
+    "phantomjs": "^1.9.17",
+    "mocha": "^2.3.2"
+  },
+  "scripts": {
+    "setup": "node-lambda setup",
+    "start": "node-lambda run",
+    "package": "node-lambda package -p \"..\/\"",
+    "deploy": "node-lambda package -p \"..\/\" && s3-cli put ../phantom-lambda-template-development.zip s3://lamda-phantom/phantom/v11.zip",
+    "test": "mocha test/*"
+  },
+  "keywords": [
+    "phantomjs",
+    "aws",
+    "lambda"
+  ]
+}
