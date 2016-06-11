@@ -11,7 +11,7 @@ Inspired by https://github.com/justengland/phantom-lambda-template
 # Install
 
 ```
-git clone
+git clone git@github.com:dkatavic/lamda-phantom-example.git
 ```
 
 # deploy
